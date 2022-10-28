@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class urinalsTest {
@@ -28,5 +31,17 @@ class urinalsTest {
         assertEquals(2, testObj.countFreeUrinals("0000"));
         System.out.println("====== Subham Kumar == TEST SIX EXECUTED for counting Free Urinals======");
         assertEquals(1, testObj.countFreeUrinals("01000"));
+    }
+
+    @Test
+    void getInputFile() throws IOException {
+        urinals testObj = new urinals();
+        ArrayList<String> input = new ArrayList<>();
+        input = testObj.getInputFile();
+        for (int i = 0; i < input.size(); i++) {
+            String inputStr = input.get(i);
+            System.out.println("====== Subham Kumar == TEST " +(i+1) +" EXECUTED for input in File======");
+            assertEquals(true, testObj.goodString(inputStr));
+        }
     }
 }
