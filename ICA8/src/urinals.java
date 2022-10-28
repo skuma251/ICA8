@@ -12,10 +12,10 @@ public class urinals {
     }
 
     public Boolean goodString( String str ) {
-        boolean flag = false;
-        for(int i=0; i<str.length(); i++) {
-            if (str.charAt(i) == '0' || str.charAt(i) == '1')
-                flag =  true;
+        boolean flag = true;
+        for(int i=1; i<str.length()-1; i++) {
+            if (str.charAt(i) == '1' && str.charAt(i-1) == '1' || str.charAt(i) == '1' && str.charAt(i+1) == '1')
+                flag =  false;
         }
         return flag;
     }
