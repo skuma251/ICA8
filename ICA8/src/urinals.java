@@ -8,15 +8,18 @@ public class urinals {
     public static void main(String[] args) {
         urinals newUrinal = new urinals();
         String inputUrinals = newUrinal.getInputKeyboard();
+        System.out.println(newUrinal.goodString(inputUrinals));
     }
 
     public Boolean goodString( String str ) {
+        boolean flag = false;
         for(int i=0; i<str.length(); i++) {
-            if(str.charAt(i) != '0') {
-                return false;
-            }
+            if (str.charAt(i) == '0')
+                flag =  true;
+            else
+                flag = false;
         }
-        return true;
+        return flag;
     }
     public String getInputKeyboard() {
         System.out.println("Enter 1 for occupied and 0 for unoccupied urinals");

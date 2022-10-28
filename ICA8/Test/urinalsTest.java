@@ -8,6 +8,6 @@ class urinalsTest {
     void goodString() {
         urinals testObj = new urinals();
         System.out.println("====== Subham Kumar == TEST ONE EXECUTED ======");
-        assertEquals(true, testObj.goodString("0100"));
+        assertEquals(true, testObj.goodString("0101"));
     }
 }
