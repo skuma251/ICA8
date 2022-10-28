@@ -38,15 +38,20 @@ public class urinals {
             if (i == 0 && str.charAt(i) == '0') {
                 if(str.charAt(i+1) == '0'){
                     count++;
+                    flag = true;
                 }
             } else if (i == str.length() - 1 && str.charAt(i) == '0' && str.charAt(i - 1) == '0' ) {
                 count++;
+                flag = true;
             } else if (str.charAt(i) == '0' && str.charAt(i - 1) == '0' && str.charAt(i + 1) == '0') {
                 count++;
+                flag = true;
             }
-            StringBuilder string = new StringBuilder(str);
-            string.setCharAt(i, ch);
-            str = String.valueOf(string);
+            if (flag) {
+                StringBuilder string = new StringBuilder(str);
+                string.setCharAt(i, ch);
+                str = String.valueOf(string);
+            }
 
         }
         return count;

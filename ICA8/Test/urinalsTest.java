@@ -17,5 +17,10 @@ class urinalsTest {
         urinals testObj = new urinals();
         System.out.println("====== Subham Kumar == TEST TWO EXECUTED ======");
         assertEquals(1, testObj.countFreeUrinals("0100"));
+        assertEquals(1, testObj.countFreeUrinals("10001"));
+        assertEquals(0, testObj.countFreeUrinals("1001"));
+        assertEquals(3, testObj.countFreeUrinals("00000"));
+        assertEquals(2, testObj.countFreeUrinals("0000"));
+        assertEquals(1, testObj.countFreeUrinals("01000"));
     }
 }
