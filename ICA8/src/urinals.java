@@ -65,19 +65,4 @@ public class urinals {
         }
         return count;
     }
-
-//    public void getInputFile() throws FileNotFoundException {
-//        String file = "./src/InputStrings.txt";
-//        FileReader fr = new FileReader(file);
-//        BufferedReader br = new BufferedReader(fr);
-//        St
-//        while ((line = br.readLine()) != null) {
-//            user = line.split(":")[0].toLowerCase();
-//            pass =  line.split(":")[1].toLowerCase();
-//            if(user.equals(userName) && pass.equals(password)) {
-//                isLoginSuccess = true;
-//                break;
-//            }
-//        }
-//    }
 }
